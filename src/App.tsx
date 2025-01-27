@@ -6,21 +6,34 @@ import { MdPhone } from "react-icons/md";
 
 const App = () => {
   const [input, setInput] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleVerification = () => {
-    const { verifyNumber } = useVerifyNumber();
-    const result = verifyNumber(input);
-    if (result) {
-      if (result.name && result.imgSrc) {
-        toast(
-          <div className="flex items-center gap-x-3">
-            <img src={result.imgSrc} className="h-6 w-6" alt={result.name} />
-            {result.message}
-          </div>
-        );
-      } else {
-        toast(result.message);
+  const handleVerification = async () => {
+    if (!input || input.length !== 11) {
+      toast.error("Please enter a valid 11-digit number.");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const { verifyNumber } = useVerifyNumber();
+      const result = verifyNumber(input);
+      if (result) {
+        if (result.name && result.imgSrc) {
+          toast(
+            <div className="flex items-center gap-x-3">
+              <img src={result.imgSrc} className="h-6 w-6" alt={result.name} />
+              {result.message}
+            </div>
+          );
+        } else {
+          toast(result.message);
+        }
       }
+    } catch (error) {
+      toast.error("An error occurred while verifying the number.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -45,13 +58,18 @@ const App = () => {
         />
         <button
           type="submit"
-          className="bg-black text-white p-4 rounded-full transition-all ease-out duration-200 hover:shadow-lg"
+          className="bg-black text-white p-3 rounded-full transition-all ease-out duration-200 hover:shadow-lg"
           onClick={handleVerification}
+          disabled={isLoading || input.length !== 11} // Disable if loading or input is invalid
         >
-          <MdPhone className="text-lg" />
-          {/* <AiFillCheckCircle  className="text-lg"/> */}
+          {isLoading ? (
+            <div className="spinner border-2 border-white border-t-transparent h-5 w-5 rounded-full animate-spin"></div>
+          ) : (
+            <MdPhone className="text-lg" />
+          )}
         </button>
       </div>
+
       <div className="absolute bottom-5 left-0">
         <a
           href="https://karasune.vercel.app/"
