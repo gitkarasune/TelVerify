@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import Navbar from "./Components/Navbar";
 const Docs = lazy(() => import("./Components/Docs"));
 import Loading from "./Components/Loading";
 const ViewPage = lazy(() => import("./Components/ViewPage"));
@@ -7,8 +8,12 @@ const Terms = lazy(() => import("./Components/Terms"));
 const Privacy = lazy(() => import("./Components/Privacy"));
 
 const App = () => {
+  const location = useLocation();
+  const showNavbar = location.pathname !== "/";
+
   return (
     <BrowserRouter>
+    {showNavbar && <Navbar />}
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<ViewPage />} />
