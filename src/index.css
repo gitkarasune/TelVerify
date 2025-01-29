@@ -92,3 +92,13 @@
         background-position: 0% 50%;
     }
 }
+
+.gradient-bg {
+    transition: all ease-in-out 3s;
+}
+
+.gradient-bg:hover {
+    background-image: linear-gradient(45deg, #000, rgb(241, 229, 229), blue, white);
+    transition: all ease-in-out 3s;
+    cursor: default;
+}
