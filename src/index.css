@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.kara-kendev {
+    font-family: "cursive", sans-serif;
+}
 
 .loading-spinner {
     border: 5px solid gold;

@@ -55,7 +55,7 @@ const ViewPage = () => {
           type="tel"
           value={input}
           onChange={handleInputChange}
-          className="w-full pl-4 outline-transparent text-sm md:text-base font-medium text-gray-900 bg-transparent"
+          className="w-full pl-4 p-2 outline-transparent text-sm md:text-base font-medium text-gray-900 bg-transparent"
           placeholder="Comfirm Number..."
           maxLength={11}
         />
@@ -72,7 +72,7 @@ const ViewPage = () => {
           )}
         </button>
         <button className="bg-blue-800 text-white p-2 rounded-full transition-all ease-out duration-200 hover:shadow-lg text-sm">
-            <Link to="/documentation">Docs</Link>
+          <Link to="/documentation">Docs</Link>
         </button>
       </div>
 
@@ -82,7 +82,9 @@ const ViewPage = () => {
           target="_blank"
           className="border border-[#E5E5E5] bg-black py-3 px-4 rounded-2xl flex items-center gap-x-3.5"
         >
-          <span className="text-sm text-[#fff]">Developed by Kara Sune</span>
+          <span className="text-sm text-[#fff]">
+            Developed by <span className="kara-kendev">Kara Sune</span>
+          </span>
         </a>
       </div>
     </main>
