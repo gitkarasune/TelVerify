@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Docs = () => {
   return (
-    <div className="min-h-screen pt-12 mb-14 maxContainer">
+    <div className="min-h-screen pt-24 mb-14 maxContainer">
       <section className="-mt-7 flex justify-center items-center flex-col">
         <h1 className="text-4xl font-bold p-2 Telverify">
           <Link to={"/"}>TelVerify </Link>Docs
@@ -102,7 +102,7 @@ const Docs = () => {
       </div>
 
       <h1 className="text-3xl mb-2 font-bold Telverify" style={{ paddingTop: "32px" }}>
-        Subscribe
+        Subscribe to our Newsletter
       </h1>
       <footer
         className="bg-black text-white p-8 rounded"
@@ -112,10 +112,10 @@ const Docs = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <h2 className="text-2xl font-bold Telverify">
-                Subscribe to our Newsletter
+                Subscribe 
               </h2>
               <p className="text-gray-400 text-center md:text-left lg:text-left xl:text-left 2xl:text-left">
-                Get the latest updates and offers.
+                Get the latest updates.
               </p>
             </div>
             <form className="flex flex-col md:flex-row items-center">
@@ -137,7 +137,7 @@ const Docs = () => {
             <p className="text-sm">
               &copy; {new Date().getFullYear()} TelVerify. All rights reserved.
             </p>
-            <div className="flex justify-center md:justify-start mt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 mt-4">
               <Link to="/privacy" className="text-gray-400 mx-2 Telverify">
                 Privacy Policy
               </Link>

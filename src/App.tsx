@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Navbar from "./Components/Navbar";
 const Docs = lazy(() => import("./Components/Docs"));
-import ChatbotPopup from "./Components/Chatbot";
 import Loading from "./Components/Loading";
 const ViewPage = lazy(() => import("./Components/ViewPage"));
 const Terms = lazy(() => import("./Components/Terms"));
@@ -12,7 +11,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <AppContent />
-      <ChatbotPopup />
     </BrowserRouter>
   );
 };
