@@ -138,10 +138,10 @@ const Docs = () => {
               &copy; {new Date().getFullYear()} TelVerify. All rights reserved.
             </p>
             <div className="flex justify-center md:justify-start mt-4">
-              <Link to="/" className="text-gray-400 mx-2 Telverify">
+              <Link to="/privacy" className="text-gray-400 mx-2 Telverify">
                 Privacy Policy
               </Link>
-              <Link to="/" className="text-gray-400 mx-2 Telverify">
+              <Link to="/terms" className="text-gray-400 mx-2 Telverify">
                 Terms of Service
               </Link>
             </div>
