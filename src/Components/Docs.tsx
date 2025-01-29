@@ -18,7 +18,7 @@ const Docs = () => {
         </Link>
       </section>
 
-      <div className="grid grid-col-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mb-4 gap-4">
+      <div className="grid grid-col-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 mb-7 gap-4">
         <section className="border border-gray-700 p-4 rounded-2xl transition-all bg-black text-white text-sm hover:border-blue-900 gradient-bg">
           <h2 className="text-2xl font-bold mb-5 Telverify">Overview</h2>
           <p>
@@ -31,7 +31,7 @@ const Docs = () => {
           </p>
         </section>
         <section className="border border-gray-700 p-4 rounded-2xl transition-all bg-black text-white text-sm hover:border-blue-900 gradient-bg">
-          <h2 className="text-2xl font-bold Telverify">Features</h2>
+          <h2 className="text-2xl font-bold Telverify mb-5">Features</h2>
           <ul className="list-disc list-inside">
             <li>Validate Nigerian phone numbers.</li>
             <li>
@@ -43,7 +43,7 @@ const Docs = () => {
           </ul>
         </section>
         <section className="border border-gray-700 p-4 rounded-2xl transition-all bg-black text-white text-sm hover:border-blue-900 gradient-bg">
-          <h2 className="text-2xl font-bold Telverify">Use Cases</h2>
+          <h2 className="text-2xl font-bold Telverify mb-5">Use Cases</h2>
           <ul className="list-disc list-inside">
             <li>Optimize SMS gateway routing.</li>
             <li>Analyze user demographics based on carrier data.</li>
@@ -51,7 +51,7 @@ const Docs = () => {
           </ul>
         </section>
         <section className="border border-gray-700 p-4 rounded-2xl transition-all bg-black text-white text-sm hover:border-blue-900 gradient-bg">
-          <h2 className="text-2xl font-bold Telverify">Acknowledgements</h2>
+          <h2 className="text-2xl font-bold Telverify mb-5">Acknowledgements</h2>
           <ul className="list-disc list-inside">
             <li>React</li>
             <li>TypeScript</li>
@@ -65,13 +65,15 @@ const Docs = () => {
       </div>
 
       <div>
-        <section className="border border-gray-700 p-4 rounded-2xl transition-all bg-black text-white text-sm hover:border-blue-900 gradient-bg mb-8">
-          <h2 className="text-2xl font-bold">Usage</h2>
-          <p>Follow these steps to use the TelVerify application:</p>
+        <section className="mb-8">
+          <div className="flex justify-center items-center mt-7 mb-4 flex-col">
+            <h2 className="text-4xl font-bold p-2 Telverify">Usage</h2>
+            <p>Follow these steps to use the TelVerify application</p>
+          </div>
           <ol className="list-decimal list-inside">
             <li>
               Open your browser and navigate to{" "}
-              <code>http://localhost:3000</code>.
+              <mark><code>http://tel-verify.vercel.app</code></mark>
             </li>
             <li>
               Enter a Nigerian phone number in the input field. The input field
