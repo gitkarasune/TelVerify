@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SubscribeForm from "./SubscribeForm";
 
 const Docs = () => {
   return (
@@ -118,26 +119,14 @@ const Docs = () => {
                 Get the latest updates.
               </p>
             </div>
-            <form className="flex flex-col md:flex-row items-center">
-              <input
-                type="email"
-                placeholder="Example@gmail.com"
-                className="p-2 rounded-sm bg-gray-900 text-black mb-2 md:mb-0 md:mr-2"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-white text-black font-medium p-2 rounded-sm text-sm transition-all"
-              >
-                Subscribe
-              </button>
-            </form>
+            {/* SubscribeForm goes here */}
+            <SubscribeForm />
           </div>
           <div className="mt-8 text-center md:text-left">
             <p className="text-sm">
               &copy; {new Date().getFullYear()} TelVerify. All rights reserved.
             </p>
-            <div className="grid grid-cols-1 lg:grid-cols-2 mt-4">
+            <div className="flex justify-start gap-3 items-center mt-4">
               <Link to="/privacy" className="text-gray-400 mx-2 Telverify">
                 Privacy Policy
               </Link>
