@@ -1,6 +1,6 @@
 const Terms = () => {
   return (
-    <div className="min-h-screen pt-32 mb-14 p-8 maxContainer">
+    <div className="min-h-screen mb-14 p-8 maxContainer">
       <div className="flex justify-center items-center flex-col mb-8">
         <h1 className="text-4xl font-bold mb-1 Telverify flex justify-center items-center">
           Terms of Service

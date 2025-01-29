@@ -6,6 +6,11 @@
     font-family: "cursive", sans-serif;
 }
 
+.navigation {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
 .maxContainer {
     padding-left: 10%;
     padding-right: 10%;

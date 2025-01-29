@@ -8,12 +8,20 @@ const Terms = lazy(() => import("./Components/Terms"));
 const Privacy = lazy(() => import("./Components/Privacy"));
 
 const App = () => {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  );
+};
+
+const AppContent = () => {
   const location = useLocation();
   const showNavbar = location.pathname !== "/";
 
   return (
-    <BrowserRouter>
-    {showNavbar && <Navbar />}
+    <>
+      {showNavbar && <Navbar />}
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<ViewPage />} />
@@ -22,7 +30,7 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </>
   );
 };
 

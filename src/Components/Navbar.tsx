@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
 
   return (
-    <nav className="bg-gray-800 text-white p-4">
-      <ul className="flex space-x-4">
+    <nav className="bg-black text-sm rounded-full navigation text-white p-4">
+      <ul className="flex space-x-4 justify-center items-center">
         <li>
           <NavLink
             to="/documentation"
