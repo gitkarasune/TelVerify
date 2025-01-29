@@ -6,6 +6,11 @@
     font-family: "cursive", sans-serif;
 }
 
+.maxContainer {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 .loading-spinner {
     border: 5px solid gold;
     border-left-color: darkblue;
