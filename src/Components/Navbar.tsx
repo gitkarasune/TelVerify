@@ -1,14 +1,15 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
   return (
-    <nav className="bg-black text-sm rounded-full navigation text-white p-4">
-      <ul className="flex space-x-4 justify-center items-center">
+    <nav className="navbar bg-black text-xs rounded-full navigation text-white p-4">
+      <ul className="flex space-x-4 justify-evenly items-center">
         <li>
           <NavLink
             to="/documentation"
-            className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-white')}
+            className={({ isActive }) =>
+              isActive ? "active-link" : "inactive-link"
+            }
           >
             Docs
           </NavLink>
@@ -16,7 +17,9 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/privacy"
-            className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-white')}
+            className={({ isActive }) =>
+              isActive ? "active-link" : "inactive-link"
+            }
           >
             Privacy
           </NavLink>
@@ -24,7 +27,9 @@ const Navbar = () => {
         <li>
           <NavLink
             to="/terms"
-            className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-white')}
+            className={({ isActive }) =>
+              isActive ? "active-link" : "inactive-link"
+            }
           >
             Terms
           </NavLink>

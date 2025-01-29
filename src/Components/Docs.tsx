@@ -10,7 +10,7 @@ const Docs = () => {
         <p className="">Nigerian Sim Card Verification Tool</p>
       </section>
 
-      <section className="flex justify-end items-center mt-9 mb-9">
+      <section className="flex justify-center items-center mt-9 mb-9">
         <Link to={"/"}>
           <button className="rounded-full border-none outline-none flex items-center justify-center text-sm bg-black text-white px-4 py-2">
             Back to Home
