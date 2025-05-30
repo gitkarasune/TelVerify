@@ -18,7 +18,7 @@ const AppContent = () => {
   const location = useLocation();
   const showNavbar = location.pathname !== "/";
 
-  return (
+  return ( 
     <>
       {showNavbar && <Navbar />}
       <Routes>
