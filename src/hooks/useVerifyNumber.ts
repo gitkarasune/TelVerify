@@ -77,7 +77,7 @@ export const useVerifyNumber = () => {
   const verifyNumber = (input: string) => {
     if (!input.trim()) {
       toast("Please enter a phone number");
-      return;
+      return; 
     }
 
     const network = networkData.find((network) =>
