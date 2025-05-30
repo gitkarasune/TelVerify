@@ -71,7 +71,7 @@ const ViewPage = () => {
             <MdPhone className="text-lg" />
           )}
         </button>
-        <button className="bg-blue-800 text-white p-2 rounded-full transition-all ease-out duration-200 hover:shadow-lg text-sm">
+        <button className="bg-blue-900 text-white p-3 rounded-full transition-all ease-out duration-200 hover:shadow-lg text-xs ">
           <Link to="/documentation">Docs</Link>
         </button>
       </div>
@@ -80,7 +80,7 @@ const ViewPage = () => {
         <a
           href="https://karasune.vercel.app/"
           target="_blank"
-          className="border border-[#E5E5E5] bg-black py-3 px-4 rounded-2xl flex items-center gap-x-3.5"
+          className="border border-[#E5E5E5] bg-black py-2 px-4 rounded-none flex items-center gap-x-3.5"
         >
           <span className="text-sm text-[#fff]">
             Developed by <span className="kara-kendev">Kara Sune</span>
