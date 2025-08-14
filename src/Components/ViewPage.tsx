@@ -130,10 +130,8 @@ const ViewPage = () => {
         <p className="text-sm mt-3">See how TelVerify can transform your business</p>
       </section>
 
-
-
       {/* Demo Modal */}
-      <CustomModal isOpen={showDemo} onClose={() => setShowDemo(false)} title="TelVerify: Complete Demo" size="lg">
+      <CustomModal isOpen={showDemo} preventOutsideClick={true} onClose={() => setShowDemo(false)} title="TelVerify: Complete Demo" size="lg">
         <div className="space-y-6">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Experience the Power of TelVerify</h3>
